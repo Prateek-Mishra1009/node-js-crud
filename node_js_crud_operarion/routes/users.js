@@ -81,7 +81,7 @@ router.get('/edit/(:id)', function(req, res, next) {
 
     let id = req.params.id;
    
-    dbConn.query('SELECT * FROM users WHERE id = ' + id, function(err, rows, fields) {
+    dbConn.query('SELECT * FROM public WHERE id = ' + id, function(err, rows, fields) {
         if(err) throw err
          
         // if user not found
